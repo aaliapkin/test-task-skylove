@@ -1,0 +1,37 @@
+.btn {
+  height: 30px;
+  min-width: 80px;
+  color: #fff;
+  background-color: rgb(100, 100, 100);
+  transition: all 0.3s ease-out;
+  font-weight: 600;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  padding: 4px 16px;
+  &:hover {
+    background-color: rgb(49, 49, 49);
+  }
+  &-ok {
+    background-color: #78cd51;
+    &:hover {
+      background-color: #36840d;
+    }
+  }
+  &-cancel {
+    background-color: #f67a6e;
+    &:hover {
+      background-color: #bd3333;
+    }
+  }
+}
+
+body {
+  background-color: #efefef;
+  font-family: Montserrat, sans-serif;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-height: 100vh;
+  padding: 40px 40px;
+}
