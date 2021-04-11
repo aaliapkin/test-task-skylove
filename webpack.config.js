@@ -39,6 +39,8 @@ module.exports = {
   },
   devServer: {
     contentBase: path.resolve(__dirname, "dist"),
+    historyApiFallback: true,
+    publicPath: "/test-task-skylove/",
   },
   devtool: "source-map",
   plugins: plugins,

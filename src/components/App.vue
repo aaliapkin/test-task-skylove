@@ -35,7 +35,20 @@ export default {
       this.displayForm = true
     },
     submitForm(payload) {
-      this.list.push(new ItemModel(payload))
+      fetch("https://localhost:8080", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      })
+        .then(result => {
+          console.log(result)
+          this.list.push(new ItemModel(payload))
+        })
+        .catch(() => {
+          this.list.push(new ItemModel(payload))
+        })
     },
   },
 

@@ -12,7 +12,12 @@
           <label for="" class="form__label">Email:</label>
           <input type="text" placeholder="" class="form__text" v-model="mail" />
           <label for="" class="form__label">Сообщение:</label>
-          <input type="text" placeholder="" class="form__text" v-model="body" />
+          <textarea
+            class="form__textarea"
+            v-model="body"
+            maxLength="1024"
+            rows="3"
+          />
           <label for="" class="form__label">Тип обращения:</label>
           <select class="form__select" v-model="type">
             <option
@@ -166,6 +171,17 @@ export default {
     justify-content: flex-start;
     background: #e7e8ec;
     margin: 0 0 16px 0;
+  }
+
+  &__textarea {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    justify-content: flex-start;
+    background: #e7e8ec;
+    margin: 0 0 16px 0;
+    resize: none;
   }
 
   &__select {
