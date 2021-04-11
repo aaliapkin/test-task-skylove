@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .actions {
   &__wrapper {
     margin: 20px 0 0 0;

@@ -1,9 +1,8 @@
 <template>
   <ul>
-    <Ticket></Ticket>
-    <Ticket></Ticket>
-    <Ticket></Ticket>
-    <Ticket></Ticket>
+    <template v-for="item in list">
+      <Ticket :item="item"></Ticket>
+    </template>
   </ul>
 </template>
 
@@ -12,10 +11,18 @@ import Ticket from "components/Ticket"
 
 export default {
   name: "List",
+
   components: {
     Ticket,
+  },
+
+  props: {
+    list: {
+      type: Array,
+      required: true,
+    },
   },
 }
 </script>
 
-<style scoped></style>
+<style scoped lang="scss"></style>
