@@ -196,6 +196,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Form",
@@ -1091,7 +1096,7 @@ var render = function() {
             _vm._v("Сообщение:")
           ]),
           _vm._v(" "),
-          _c("input", {
+          _c("textarea", {
             directives: [
               {
                 name: "model",
@@ -1100,8 +1105,8 @@ var render = function() {
                 expression: "body"
               }
             ],
-            staticClass: "form__text",
-            attrs: { type: "text", placeholder: "" },
+            staticClass: "form__textarea",
+            attrs: { maxLength: "1024", rows: "3" },
             domProps: { value: _vm.body },
             on: {
               input: function($event) {
